@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .comparision{
+    margin: 120px 0;
+ }
+.table {
+    color: white !important;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.comparision-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    aspect-ratio: 3/4;
+    background-blend-mode: color;
+}
+
+.comparision h2{
+    margin-top: 50px;
+    color: white;
+}
+
+.comparision h5 {
+    color: #ffff;
+    /* font-weight: bold; */
+    font-size: 1.2rem !important;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.table th {
+    /* background-color: #300; */
+    color: #ffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    /* border: 1px solid #ffff; */
+}
+
+.table td {
+    /* background-color: #300; */
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.5rem;
+    margin: 10px;
+    /* border: 1px solid #ffff; */
+}
+
+.table td img {
+    transition: transform 0.3s ease;
+    /* border: 2px solid #555; */
+    border-radius: 10px;
+}
+
+.table td img:hover {
+    transform: scale(1.1);
+}
+
+#Brand1,
+#Brand2,
+#Price1,
+#Price2,
+#Performance1,
+#Performance2,
+#Library1,
+#Library2,
+#Features1,
+#Features2,
+#Storage1,
+#Storage2 {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.col-footer p:hover{
+    color: #d7d7d7;
+  
+  }

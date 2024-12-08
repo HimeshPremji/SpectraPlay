@@ -1,0 +1,82 @@
+
+  /* Poppins */
+  @font-face {
+    font-family: 'Poppins';
+    src: url('fontstoadd/Poppins-Bold.woff2') format('woff2');
+    font-weight: bold; /* Equivalent to 700 */
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('fontstoadd/Poppins-Light.woff2') format('woff2');
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('fontstoadd/Poppins-Medium.woff2') format('woff2');
+    font-weight: 500;
+  }
+.productcard {
+  font-family: "Inter Tight", "Poppins" !important;
+}
+
+.headingText h1,
+.headingText h1 button,
+.headingText h2,
+.headingText h2 button,
+.headingText h3,
+.headingText h3 button,
+.headingText h4,
+.headingText h4 button,
+.headingText h5,
+.headingText h5 button {
+    font-family: "Inter Tight", "Poppins" !important;
+    color: #fff ;
+    font-weight: 700;
+}
+
+.headingText h3,
+.headingText h3 button,
+.headingText h4,
+.headingText h4 button {
+    font-weight: 600;
+}
+
+.headingText h5 button,
+.headingText h5 {
+    font-weight: 500;
+}
+
+.secondaryheadingText p,
+/* .secondaryheadingText a, */
+.secondaryheadingText label {
+    font-family: "Inter", "Poppins" !important;
+    color: #B3B3B3;
+    font-weight: 300;
+  }
+  
+  .highllightedText a  {
+    color: #3f3f3f ;
+    text-decoration: none;
+    
+  }
+.caption h1,
+.caption h2,
+.caption h3,
+.caption h4,
+.caption h5,
+.caption h6{
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.caption h2 {
+  font-size: 48px;
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+}
+.caption p {
+  font-size: 17px;
+  margin-bottom: 70px;
+}

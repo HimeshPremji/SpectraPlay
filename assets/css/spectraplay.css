@@ -1,0 +1,926 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+div pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+figure,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  background: #1A1A1A;
+  background: #400b0b;
+  background: linear-gradient(107deg, rgba(58, 9, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(107deg, rgba(58, 9, 9, 1) 0%, rgb(12, 1, 1) 100%) fixed;
+  color: #B3B3B3;
+  /* font-family: "Inter Tight", "Poppins", sans-serif; */
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
+  display: block;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #B3B3B3;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #4a4a4a;
+}
+
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 
+---------------------------------------------
+Global Styles
+--------------------------------------------- 
+*/
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2C1111;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+  width: 12px;
+}
+
+::selection {
+  background: #fff;
+  color: #2C1111;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #fff;
+  color: #2C1111;
+}
+
+.section {
+  margin-top: 120px;
+}
+
+
+.section-heading h2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
+  /* margin-top: 20px; */
+  line-height: 44px;
+  color: #a4a3a3;
+  color: #e5e5e5;
+  text-shadow: 1px 1px 12px rgb(11, 2, 2);
+}
+
+.filter-main-button a,
+.filter-main-button button,
+.main-button a,
+.main-button button {
+  background-color: #400B0B;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 25px;
+  transition: all 0.3s;
+  border: none;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+
+.main-button button:active {
+  background-color: #691e1e;
+  transition: background-color 0.3s ease;
+}
+
+.filter-main-button button {
+  padding: 14px 0;
+}
+
+/* 
+---------------------------------------------
+Header Style
+--------------------------------------------- 
+*/
+
+.header-area {
+  /*position: absolute;
+  */background: transparent;
+  padding: 30px 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all .24s ease 0s;
+  -webkit-transition: all .24s ease 0s;
+  -moz-transition: all .24s ease 0s;
+  -ms-transition: all .24s ease 0s;
+  -o-transition: all .24s ease 0s;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #aaa;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: #300;
+  color: #fff;
+  border-radius: 20px;
+}
+
+/* 
+---------------------------------------------
+Banner Style
+--------------------------------------------- 
+*/
+
+.main-banner {
+  background-position: center bottom;
+  background-repeat: repeat;
+  background-size: cover;
+  padding: 200px 0 80px 0;
+}
+
+/* 
+---------------------------------------------
+Custon Marquee Style
+--------------------------------------------- 
+*/
+
+.marquee {
+  --gap: 2rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none !important;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll 8s linear infinite;
+  user-select: none !important; 
+}
+
+.marquee__content img {
+  height: 180px;
+  user-select: none !important;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* 
+---------------------------------------------
+* Games & Consoles Cards Style
+--------------------------------------------- 
+*/
+
+/** Trending and Most Played Sections Cards Styles **/
+.most-played .card-body,
+.trending .card-body {
+  margin-top: 10px !important;
+  position: relative;
+  background: transparent !important;
+  padding: 0 !important;
+  backdrop-filter: blur(0);
+  transform: translateY(0);
+}
+.most-played .productcard:hover .productimage,
+.trending .productcard:hover .productimage {
+  filter: sepia(1);
+  box-shadow: 0 8px 16px rgba(36, 32, 32, 0.2);
+}
+.most-played .card-body .category,
+.most-played .card-body .console,
+.most-played .card-body .game,
+.most-played .card-body .star,
+.trending .card-body .category,
+.trending .card-body .console,
+.trending .card-body .game,
+.trending .card-body .star {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  font-size: normal;
+}
+
+
+
+.consolecard,
+.productcard {
+  overflow: hidden;
+  position: relative;
+  color: #D9D8D9;
+  border-radius: 32px;
+  transition: all 0.3s ease-in-out;
+}
+.consolecard:hover,
+.productcard:hover {
+  transform: scale(1.05);
+}
+
+.productcard .thumb {
+  border-radius: 14px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.productcard .thumb:hover {
+  filter: sepia(1);
+  box-shadow: 0 8px 16px rgba(36, 32, 32, 0.2);
+}
+.consolesimages,
+.productimage {
+  border-radius: 14px;
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.consolecard:hover .consolesimages,
+.productcard:hover .productimage {
+  filter: sepia(0.2);
+  box-shadow: 0 8px 16px rgba(36, 32, 32, 0.2);
+}
+
+.category,
+.game,
+.star {
+  padding: 0;
+  margin: 0;
+  line-height: 0%;
+  line-height: 90%;
+  font-size: 0.8em;
+  color: #B3B3B3;
+}
+
+.price {
+  color: #e5e5e5;
+}
+.star {
+  color: #FFD700 !important;
+  font-size: 1.1rem;
+}
+
+.card-body {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  padding: 0 14% !important;
+  transform: translateY(20%);
+  bottom: 0;
+  background: linear-gradient(180deg, #00000046, #000000);
+  backdrop-filter: blur(3px);
+  transition: transform 0.3s ease-in-out;
+  
+}
+.consolecard button,
+.productcard button {
+  color: #ffffff;
+  background-color:  #400B0B;
+  border-radius: 90px !important;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  opacity: 0;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.consolecard button:hover,
+.productcard button:hover{
+  background-color: #2C1111;
+}
+
+.productcard .price span {
+  font-weight: 400;
+  color: #fff;
+}
+.productcard .price span {
+  font-weight: 400;
+  color: #fff;
+}
+
+.consolecard:hover .card-body,
+.productcard:hover .card-body {
+  transform: translateY(0);
+  background: linear-gradient(180deg, #00000046, #000000);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease-in-out;
+}
+.consolecard:hover button,
+.productcard:hover button {
+  opacity: 1;
+  margin-bottom: 1pc;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 
+---------------------------------------------
+Games & Consoles Filter Style
+--------------------------------------------- 
+*/
+.gamesSectionParentJI,
+.consolessectionParentJI {
+  background-image: url(../images/games-bg-8.svg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+
+}
+
+.de-gradient-edge-top {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(18, 7, 7) 0%, rgba(255, 255, 255, 0) 100%)
+}
+
+.de-gradient-edge-bottom {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(0deg, rgba(18, 7, 7) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.comparisionSectionParentJI,
+.gamesSectionParentJI,
+.consolessectionParentJI {
+  backdrop-filter: blur(12px);
+  background-color: rgba(18, 7, 7);
+  padding: 100px 0px;
+  border-radius: 0px;
+}
+/* 
+---------------------------------------------
+Comparison Section
+--------------------------------------------- 
+*/
+.comparison {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  border-radius: 8px;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* background-color: #7a7a7a; */
+}
+
+.comparison-section {
+  text-align: center;
+  padding: 30px;
+  /* background-color: rgb(17, 3, 3, 0.5); */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.comparison-section h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.comparison-section p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.compare-btn {
+  display: inline-block;
+  background-color: #530f0f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 0;
+}
+
+.compare-btn:hover {
+  background-color: #110303;
+}
+
+.consolesimages {
+  aspect-ratio: 3/3;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .pcgamesdiv, .xboxgamesdiv, .ps5gamesdiv, .nintendogamesdiv, .populargamesdiv, .sonyconsolesdiv, .microsoftconsolesdiv, .nintendoconsolesdiv, .popularconsolesdiv {
+    margin-bottom: 20px;
+   }
+     
+}
+/* 
+---------------------------------------------
+Categories Style
+--------------------------------------------- 
+*/
+
+.categories .main-button {
+  margin-top: 30px;
+}
+
+.categories .item {
+  background: linear-gradient(to right, #530d0d, #651d1d, #691e1e);
+  position: relative;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.categories .item .thumb {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.categories .item h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  padding: 22px;
+  margin-bottom: 0px;
+}
+
+/* 
+---------------------------------------------
+CTA Style
+--------------------------------------------- 
+*/
+
+.cta {
+  position: relative;
+}
+
+.cta::after {
+  background-image: url(../images/banner-image.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: '';
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: -1;
+}
+
+.cta .shop {
+  margin-top: 80px;
+  background-color: rgba(18, 7, 7, 0.803);
+  border-radius: 25px;
+  padding: 40px;
+}
+
+.cta .shop .section-heading {
+  margin-bottom: 30px;
+}
+
+.cta .shop p {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cta .shop .main-button {
+  margin-top: 30px;
+}
+
+.cta .subscribe {
+  background-color: rgba(18, 7, 7, 0.803);
+  border-radius: 25px;
+  padding: 40px 20px;
+}
+
+.cta .subscribe .section-heading {
+  margin-bottom: 30px;
+}
+
+.cta .subscribe form {
+  position: relative;
+  width: 100%;
+}
+
+.cta .subscribe form input {
+  width: calc(100% - 120px);
+  /* Adjusted for button space */
+  height: 50px;
+  outline: none;
+  border-radius: 25px;
+  /* background-color: #fff; */
+  border: none;
+  padding: 0px 25px;
+  font-size: 14px;
+  color: #7a7a7a;
+}
+
+.cta .subscribe form input:focus {
+  box-shadow: none;
+}
+
+.cta .subscribe form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  background-color: #400B0B;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;
+  padding: 0 25px;
+  transition: all 0.3s;
+}
+
+.cta .subscribe form button:hover {
+  background-color: #400B0B;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+  .cta .shop,
+  .cta .subscribe {
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .cta .shop .section-heading,
+  .cta .subscribe .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .cta::after {
+    display: none;
+    max-width: 100%;
+    transform: translateX(-50%);
+  }
+}
+
+.contact-page {
+  background-color: rgba(18, 7, 7, 0.803);
+  backdrop-filter: blur(12px);
+  border-radius: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.form-section h1 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contact-form .form-control {
+  border-radius: 10px;
+  background: #f0d7d7;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form .form-control:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.contact-form button {
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #611313;
+  box-shadow: 0 4px 10px rgba(97, 19, 19, 0.4);
+}
+
+.image-section iframe {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 425px) {
+  .image-section iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 
+---------------------------------------------
+Footer Style
+--------------------------------------------- 
+*/
+footer {
+  background-color: rgba(18, 7, 7, 0.803);
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  padding: 3rem 1rem;
+}
+
+.container-footer {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+.row-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col-footer {
+  min-width: 250px;
+  color: #f2f2f2f2;
+  font-family: poppins;
+  padding: 0 2rem;
+}
+.col-footer p:hover{
+  color: #d7d7d7;
+
+}
+
+.col-footer .logo {
+  width: 200px;
+  margin-bottom: 25px;
+}
+
+.col-footer h3 {
+  color: #8b2d2d;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.col-footer h3::after {
+  content: '';
+  height: 3px;
+  width: 0px;
+  background-color: #8b2d2d;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+
+}
+
+.col-footer h3:hover::after {
+  width: 50px
+}
+
+.col-footer .social a i {
+  color: #8b2d2d;
+  margin-top: 2rem;
+  margin-right: 5px;
+  transition: 0.3s ease;
+}
+
+.col-footer .social a i:hover {
+  transform: scale(1.5);
+  filter: grayscale(25);
+}
+
+.col-footer .links a {
+  display: block;
+  text-decoration: none;
+  color: #f2f2f2;
+  margin-bottom: 5px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.col-footer .links a::before {
+  content: '';
+  height: 16px;
+  width: 3px;
+  position: absolute;
+  top: 1px;
+  left: -10px;
+  background-color: #8b2d2d;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.col-footer .links a:hover::before {
+  opacity: 1;
+}
+
+.col-footer .links a:hover {
+  transform: translateX(-8px);
+  color: #8b2d2d;
+}
+
+.col-footer .contact-details {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.col-footer .contact-details i {
+  margin-right: 15px;
+}
+
+.row-footer .form-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.row-footer .form-footer input {
+  background-color: #1a1c20ff;
+  border: 0;
+  outline: none;
+  padding: 14px 20px;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-footer button {
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #8b2d2d;
+}
+
+/********** Responsive Design ********/
+@media(max-width:991px) {
+  .header-area{
+    position: sticky;
+    background: #000000c5 !important;
+    backdrop-filter: blur(12px);
+  }
+
+  .row-footer {
+    flex-direction: column;
+  }
+
+  .col-footer {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
+
+@media(max-width:768px) {
+  .row-footer {
+    flex-direction: column;
+  }
+
+  .col-footer {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
